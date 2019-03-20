@@ -2,4 +2,4 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return render(request, 'chessboard/chessboard.html')
+    return HttpResponse('This is the main page of the site. Add content here!')
