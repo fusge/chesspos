@@ -20,6 +20,7 @@ from . import views
 
 urlpatterns = [
     path('chessboard/', include('chessboard.urls')),
-    path('', views.index, name='ChessPos'),
+    path('', views.index, name='ChessPos-Home'),
+    path('about/', views.about, name='ChessPos-About'),
     path('admin/', admin.site.urls),
 ]
