@@ -1,5 +1,24 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
-    <h1>This is the template for the chess board application on my site.</h1>
+    <h1>Chess Position</h1>
+   
+    <!-- First load the javascript code for the chess board -->
+    <script type="text/javascript" src="{% static 'chessboard/js/chessboard-0.3.0.js' %}"></script>
+    <script type="text/javascript" src="{% static 'chessboard/js/chess.min.js' %}"></script>
+
+    <!-- Load stylesheets relevant to the board itself -->
+    <link rel="stylesheet" type="text/css" href="{% static 'chessboard/css/chessboard-0.3.0.min.css' %}">
+
+    <div class="container">
+    <div id="board" style="width: 400px">
+        <script src="{% static 'chessboard/js/chess_scripts.js' %}"></script>
+    </div>
+    </div>
+
+    <p>Status: <span id="status"></span></p>
+    <p>FEN: <span id="fen"></span></p>
+    <p>PGN: <span id="pgn"></span></p>
 {% endblock content %}
