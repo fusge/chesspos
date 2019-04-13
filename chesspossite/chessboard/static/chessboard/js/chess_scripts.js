@@ -1,3 +1,4 @@
+$(document).ready(function(){
 var board,
   game = new Chess(),
   statusEl = $('#status'),
@@ -78,3 +79,4 @@ var cfg = {
 board = ChessBoard('board', cfg);
 
 updateStatus();
+});
